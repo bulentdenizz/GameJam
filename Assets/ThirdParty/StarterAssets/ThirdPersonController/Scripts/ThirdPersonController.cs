@@ -310,6 +310,9 @@ namespace StarterAssets
                     {
                         _animator.SetBool(_animIDJump, true);
                     }
+                    
+                    // Jump input'unu reset et - BURAYA EKLEYİN
+                    _input.jump = false;
                 }
 
                 // jump timeout

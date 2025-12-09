@@ -36,7 +36,20 @@ namespace StarterAssets
 
 		public void OnJump(InputValue value)
 		{
-			JumpInput(value.isPressed);
+			// value.isPressed yerine value.Get<float>() > 0 kullan
+			// veya daha güvenilir bir yöntem
+			bool isPressed = value.isPressed;
+			
+			// Debug için (opsiyonel)
+			// Debug.Log($"Jump: {isPressed}");
+			
+			JumpInput(isPressed);
+			
+			// Eğer false ise (tuş bırakıldı), hemen false yap
+			if (!isPressed)
+			{
+				jump = false;
+			}
 		}
 
 		public void OnSprint(InputValue value)
