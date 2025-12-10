@@ -1,74 +1,9 @@
 fileFormatVersion: 2
-guid: 5be6d204083a9ab49858b90d79bc7df2
+guid: e009e2c18f3ac9a4a9cca478de1a1956
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: tv_out
-    second: {fileID: 2100000, guid: 6ea87fa75c596eb4590c5796b7333424, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: tv_screen
-    second: {fileID: 2100000, guid: 8572e59b32df4264fa03e41609756ea9, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: "\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B"
-    second: {fileID: 2100000, guid: b71bcb5e82f310a438b49708f9c47cc7, type: 2}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Coffee_table_low_DefaultMaterial_BaseColor
-    second: {fileID: 2800000, guid: 4f4ed389d0bc8a24e8b91aa1bdfea356, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Coffee_table_low_DefaultMaterial_Roughness
-    second: {fileID: 2800000, guid: 60756393f8efdcf4796cc4f45b165157, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: tv_02_tv_out_BaseColor
-    second: {fileID: 2800000, guid: 2d5c7831ab6de3848b46bbd636d66ff1, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: tv_02_tv_out_Metallic
-    second: {fileID: 2800000, guid: e2a63d884abac2e49b78c7b5b722e399, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: tv_02_tv_out_Normal
-    second: {fileID: 2800000, guid: ef66c91401d9b4b47af29a33c9804a1a, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: tv_02_tv_out_Roughness
-    second: {fileID: 2800000, guid: db49c01aa937f0a4685ab3a5647d2024, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: tv_02_tv_screen_BaseColor
-    second: {fileID: 2800000, guid: ffc466b5bed1c7847bb474b217e73eec, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: tv_02_tv_screen_Metallic
-    second: {fileID: 2800000, guid: e7468f140bfd3cd48837000fe5a38e02, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: tv_02_tv_screen_Normal
-    second: {fileID: 2800000, guid: 396158d1870bcca4f8571f5a80e2a0db, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: tv_02_tv_screen_Roughness
-    second: {fileID: 2800000, guid: 4b862cd57fae71147b4650f61e9d7f0c, type: 3}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0

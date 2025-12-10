@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5be6d204083a9ab49858b90d79bc7df2
+guid: ef2061fb40583894c9e292d5b5782950
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
@@ -7,68 +7,78 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: tv_out
-    second: {fileID: 2100000, guid: 6ea87fa75c596eb4590c5796b7333424, type: 2}
+      name: Material
+    second: {fileID: 2100000, guid: a7ebd928340beea4ea4ad700158e4de1, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: tv_screen
-    second: {fileID: 2100000, guid: 8572e59b32df4264fa03e41609756ea9, type: 2}
+      name: Sphere.001__0
+    second: {fileID: 2100000, guid: 128d8024552d64746b4931dc3af93e08, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: "\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B"
-    second: {fileID: 2100000, guid: b71bcb5e82f310a438b49708f9c47cc7, type: 2}
+      name: antina-02
+    second: {fileID: 2100000, guid: 54c5bcd706b2d6f43a6946f7cf29e899, type: 2}
   - first:
-      type: UnityEngine:Texture2D
+      type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Coffee_table_low_DefaultMaterial_BaseColor
-    second: {fileID: 2800000, guid: 4f4ed389d0bc8a24e8b91aa1bdfea356, type: 3}
+      name: antina-base
+    second: {fileID: 2100000, guid: 3327d8dd66178a4468a4ee488622fa49, type: 2}
   - first:
-      type: UnityEngine:Texture2D
+      type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Coffee_table_low_DefaultMaterial_Roughness
-    second: {fileID: 2800000, guid: 60756393f8efdcf4796cc4f45b165157, type: 3}
+      name: brand
+    second: {fileID: 2100000, guid: 239b2da5b3f0a6a45ba29c4c25278ced, type: 2}
   - first:
-      type: UnityEngine:Texture2D
+      type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: tv_02_tv_out_BaseColor
-    second: {fileID: 2800000, guid: 2d5c7831ab6de3848b46bbd636d66ff1, type: 3}
+      name: brand-border
+    second: {fileID: 2100000, guid: 8a5fe5ae9dd510943b878d0b67e9cd2f, type: 2}
   - first:
-      type: UnityEngine:Texture2D
+      type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: tv_02_tv_out_Metallic
-    second: {fileID: 2800000, guid: e2a63d884abac2e49b78c7b5b722e399, type: 3}
+      name: channel
+    second: {fileID: 2100000, guid: 4c1c182c58149a144b2e30dffe749880, type: 2}
   - first:
-      type: UnityEngine:Texture2D
+      type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: tv_02_tv_out_Normal
-    second: {fileID: 2800000, guid: ef66c91401d9b4b47af29a33c9804a1a, type: 3}
+      name: controls
+    second: {fileID: 2100000, guid: 6dd82fd60fbf2b946825d537bf004635, type: 2}
   - first:
-      type: UnityEngine:Texture2D
+      type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: tv_02_tv_out_Roughness
-    second: {fileID: 2800000, guid: db49c01aa937f0a4685ab3a5647d2024, type: 3}
+      name: dial
+    second: {fileID: 2100000, guid: 94102116db0689b45b6a44c33384eb95, type: 2}
   - first:
-      type: UnityEngine:Texture2D
+      type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: tv_02_tv_screen_BaseColor
-    second: {fileID: 2800000, guid: ffc466b5bed1c7847bb474b217e73eec, type: 3}
+      name: screen
+    second: {fileID: 2100000, guid: 3497886e0689a8341a462a2144b2bf45, type: 2}
   - first:
-      type: UnityEngine:Texture2D
+      type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: tv_02_tv_screen_Metallic
-    second: {fileID: 2800000, guid: e7468f140bfd3cd48837000fe5a38e02, type: 3}
+      name: screen-base
+    second: {fileID: 2100000, guid: c0ea3a0a6e5620c4a8f823af9a0b23f9, type: 2}
   - first:
-      type: UnityEngine:Texture2D
+      type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: tv_02_tv_screen_Normal
-    second: {fileID: 2800000, guid: 396158d1870bcca4f8571f5a80e2a0db, type: 3}
+      name: screw
+    second: {fileID: 2100000, guid: c7d4318fd63cb8b40b4f38e8656acd88, type: 2}
   - first:
-      type: UnityEngine:Texture2D
+      type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: tv_02_tv_screen_Roughness
-    second: {fileID: 2800000, guid: 4b862cd57fae71147b4650f61e9d7f0c, type: 3}
+      name: stand
+    second: {fileID: 2100000, guid: 0704b358203138441967a271d4a98420, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tv-base
+    second: {fileID: 2100000, guid: e353223f9349e034d88022556cdbbb62, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: volume
+    second: {fileID: 2100000, guid: 7302c4806d84c0f49aa753c61144a688, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

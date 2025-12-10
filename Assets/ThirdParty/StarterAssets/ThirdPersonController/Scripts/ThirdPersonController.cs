@@ -97,6 +97,7 @@ namespace StarterAssets
         private int _animIDJump;
         private int _animIDFreeFall;
         private int _animIDMotionSpeed;
+        private int _animIDSitting;
 
 #if ENABLE_INPUT_SYSTEM 
         private PlayerInput _playerInput;
@@ -159,6 +160,21 @@ namespace StarterAssets
             JumpAndGravity();
             GroundedCheck();
             Move();
+            HandleSitting();
+        }
+
+        private void HandleSitting()
+        {
+            if (_hasAnimator && _input != null)
+            {
+                // Toggle sitting state when E is pressed
+                if (_input.sit)
+                {
+                    bool currentSitting = _animator.GetBool(_animIDSitting);
+                    _animator.SetBool(_animIDSitting, !currentSitting);
+                    _input.sit = false; // Reset input to prevent continuous toggling
+                }
+            }
         }
 
         private void LateUpdate()
@@ -173,6 +189,7 @@ namespace StarterAssets
             _animIDJump = Animator.StringToHash("Jump");
             _animIDFreeFall = Animator.StringToHash("FreeFall");
             _animIDMotionSpeed = Animator.StringToHash("MotionSpeed");
+            _animIDSitting = Animator.StringToHash("IsSitting");
         }
 
         private void GroundedCheck()
@@ -213,6 +230,20 @@ namespace StarterAssets
 
         private void Move()
         {
+            // Check if sitting - if so, don't move
+            bool isSitting = _hasAnimator && _animator.GetBool(_animIDSitting);
+            if (isSitting)
+            {
+                _speed = 0.0f;
+                _animationBlend = 0.0f;
+                if (_hasAnimator)
+                {
+                    _animator.SetFloat(_animIDSpeed, 0.0f);
+                    _animator.SetFloat(_animIDMotionSpeed, 1.0f);
+                }
+                return;
+            }
+
             // set target speed based on move speed, sprint speed and if sprint is pressed
             float targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
 
