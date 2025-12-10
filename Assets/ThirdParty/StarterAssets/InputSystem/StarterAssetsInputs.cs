@@ -60,7 +60,12 @@ namespace StarterAssets
 
 		public void OnSit(InputValue value)
 		{
-			SitInput(value.isPressed);
+			bool isPressed = value.isPressed;
+			SitInput(isPressed);
+			if (!isPressed)
+			{
+				sit = false;
+			}
 		}
 #endif
 

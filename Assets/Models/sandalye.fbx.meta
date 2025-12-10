@@ -1,9 +1,29 @@
 fileFormatVersion: 2
-guid: e009e2c18f3ac9a4a9cca478de1a1956
+guid: 37ce23506c6e6cc4aae3ad8684e34320
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chair
+    second: {fileID: 2100000, guid: eed584fd349fe31488ecef2e00a8b4a6, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: yizi_sp_yizi_BaseColor
+    second: {fileID: 2800000, guid: 548a7dc8e1ce3284299cd7e7d041a22c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: yizi_sp_yizi_Metallic
+    second: {fileID: 2800000, guid: e362f4cbaceb39549a921b3a491903a0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: yizi_sp_yizi_Roughness
+    second: {fileID: 2800000, guid: c99b6d1eec8d30845b0d791f3c967c7e, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -22,7 +42,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -94,13 +114,13 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 1
+    hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 3
+  animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 1
+  avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   importBlendShapeDeformPercent: 1
   remapMaterialsIfMaterialImportModeIsNone: 0
