@@ -84,7 +84,37 @@ public class PictureTableInteraction : MonoBehaviour
                     // Try to find in children
                     doorAnimator = door.GetComponentInChildren<Animator>();
                 }
+                
+                // Enable animator if it's disabled
+                if (doorAnimator != null && !doorAnimator.enabled)
+                {
+                    doorAnimator.enabled = true;
+                    Debug.Log("Door animator was disabled, enabled it!");
+                }
             }
+            else
+            {
+                Debug.LogWarning("Door GameObject not found! Please assign door animator manually in inspector.");
+            }
+        }
+        
+        // Debug info
+        if (pictureAnimator == null)
+        {
+            Debug.LogError("Picture animator not found!");
+        }
+        else
+        {
+            Debug.Log($"Picture animator found: {pictureAnimator.name}");
+        }
+        
+        if (doorAnimator == null)
+        {
+            Debug.LogWarning("Door animator not found! Door animation will not play.");
+        }
+        else
+        {
+            Debug.Log($"Door animator found: {doorAnimator.name}, Enabled: {doorAnimator.enabled}");
         }
         
 #if ENABLE_INPUT_SYSTEM
@@ -127,8 +157,15 @@ public class PictureTableInteraction : MonoBehaviour
 
     void Update()
     {
-        if (playerTransform == null || pictureAnimator == null)
+        if (playerTransform == null)
         {
+            Debug.LogWarning("Player transform not found! Cannot detect interaction.");
+            return;
+        }
+        
+        if (pictureAnimator == null)
+        {
+            Debug.LogWarning("Picture animator not found! Cannot play animation.");
             return;
         }
         
@@ -160,7 +197,12 @@ public class PictureTableInteraction : MonoBehaviour
         {
             if (allowMultiplePlays || !hasPlayedAnimation)
             {
+                Debug.Log($"Player pressed E near picture table. Distance: {distance:F2}");
                 PlayPictureAnimation();
+            }
+            else
+            {
+                Debug.Log("Animation already played and multiple plays disabled.");
             }
         }
     }
@@ -179,6 +221,10 @@ public class PictureTableInteraction : MonoBehaviour
             // Start coroutine to wait for picture animation to finish, then play door animation
             StartCoroutine(WaitForPictureAnimationThenPlayDoor());
         }
+        else
+        {
+            Debug.LogError("Cannot play picture animation - picture animator is null!");
+        }
     }
     
     IEnumerator WaitForPictureAnimationThenPlayDoor()
@@ -189,12 +235,30 @@ public class PictureTableInteraction : MonoBehaviour
         // Play door animation
         if (doorAnimator != null)
         {
-            doorAnimator.Play(doorAnimationName, 0, 0f);
-            Debug.Log("Door animation played!");
+            // Make sure animator is enabled
+            if (!doorAnimator.enabled)
+            {
+                doorAnimator.enabled = true;
+                Debug.Log("Door animator was disabled, enabled it before playing animation!");
+            }
+            
+            // Check if animator has the animation state
+            if (doorAnimator.HasState(0, Animator.StringToHash(doorAnimationName)))
+            {
+                doorAnimator.Play(doorAnimationName, 0, 0f);
+                Debug.Log($"Door animation '{doorAnimationName}' played!");
+            }
+            else
+            {
+                Debug.LogError($"Door animator does not have state '{doorAnimationName}'! Available states:");
+                // Try to play with just the name
+                doorAnimator.Play(doorAnimationName, 0, 0f);
+                Debug.LogWarning($"Attempted to play '{doorAnimationName}' anyway...");
+            }
         }
         else
         {
-            Debug.LogWarning("Door animator not found! Please assign it in the inspector.");
+            Debug.LogError("Door animator not found! Please assign it in the inspector.");
         }
     }
     
