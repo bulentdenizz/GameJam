@@ -1,9 +1,84 @@
 fileFormatVersion: 2
-guid: d1d8dd06eba6043b393a06887df039a6
+guid: ef2061fb40583894c9e292d5b5782950
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: a7ebd928340beea4ea4ad700158e4de1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sphere.001__0
+    second: {fileID: 2100000, guid: 128d8024552d64746b4931dc3af93e08, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: antina-02
+    second: {fileID: 2100000, guid: 54c5bcd706b2d6f43a6946f7cf29e899, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: antina-base
+    second: {fileID: 2100000, guid: 3327d8dd66178a4468a4ee488622fa49, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: brand
+    second: {fileID: 2100000, guid: 239b2da5b3f0a6a45ba29c4c25278ced, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: brand-border
+    second: {fileID: 2100000, guid: 8a5fe5ae9dd510943b878d0b67e9cd2f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: channel
+    second: {fileID: 2100000, guid: 4c1c182c58149a144b2e30dffe749880, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: controls
+    second: {fileID: 2100000, guid: 6dd82fd60fbf2b946825d537bf004635, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dial
+    second: {fileID: 2100000, guid: 94102116db0689b45b6a44c33384eb95, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: screen
+    second: {fileID: 2100000, guid: 3497886e0689a8341a462a2144b2bf45, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: screen-base
+    second: {fileID: 2100000, guid: c0ea3a0a6e5620c4a8f823af9a0b23f9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: screw
+    second: {fileID: 2100000, guid: c7d4318fd63cb8b40b4f38e8656acd88, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stand
+    second: {fileID: 2100000, guid: 0704b358203138441967a271d4a98420, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tv-base
+    second: {fileID: 2100000, guid: e353223f9349e034d88022556cdbbb62, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: volume
+    second: {fileID: 2100000, guid: 7302c4806d84c0f49aa753c61144a688, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
