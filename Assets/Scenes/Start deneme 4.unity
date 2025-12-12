@@ -350,10 +350,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1698789367}
     m_Modifications:
-    - target: {fileID: 8598716675188332168, guid: 419868c0b847e2d40b09d4f51cfe75fe, type: 3}
-      propertyPath: m_Name
-      value: tv_desk_4
-      objectReference: {fileID: 0}
     - target: {fileID: 4627029274829175636, guid: 419868c0b847e2d40b09d4f51cfe75fe, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.3244939
@@ -393,6 +389,10 @@ PrefabInstance:
     - target: {fileID: 4627029274829175636, guid: 419868c0b847e2d40b09d4f51cfe75fe, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598716675188332168, guid: 419868c0b847e2d40b09d4f51cfe75fe, type: 3}
+      propertyPath: m_Name
+      value: tv_desk_4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7234,8 +7234,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132149322330562}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.037591375, y: -0.72237855, z: 0.04541326, w: -0.6889802}
-  m_LocalPosition: {x: 33.810497, y: 5.1643243, z: 7.3133616}
+  m_LocalRotation: {x: -0.17084074, y: 0.028460205, z: -0.0010278374, w: -0.984887}
+  m_LocalPosition: {x: -4.000377, y: 0.07520211, z: 5.899132}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
