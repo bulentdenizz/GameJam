@@ -209,6 +209,15 @@ namespace StarterAssets
             // Cinemachine will follow this target
             CinemachineCameraTarget.transform.rotation = Quaternion.Euler(_cinemachineTargetPitch + CameraAngleOverride,
                 _cinemachineTargetYaw, 0.0f);
+
+            // Kamerayı döndürdüğümüzde karakteri de döndür (hareket etmiyorsa)
+            if (_input.move == Vector2.zero && _input.look.x != 0)
+            {
+                float targetYaw = _cinemachineTargetYaw;
+                float currentYaw = transform.eulerAngles.y;
+                float rotation = Mathf.SmoothDampAngle(currentYaw, targetYaw, ref _rotationVelocity, RotationSmoothTime);
+                transform.rotation = Quaternion.Euler(0.0f, rotation, 0.0f);
+            }
         }
 
         private void Move()
