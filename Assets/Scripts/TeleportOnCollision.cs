@@ -168,6 +168,7 @@ public class TeleportOnCollision : MonoBehaviour
             
             // Draw teleport target position
             Vector3 targetPos;
+
             if (useCurrentPosition)
             {
                 targetPos = savedPlayerPosition;
@@ -179,6 +180,7 @@ public class TeleportOnCollision : MonoBehaviour
             else
             {
                 targetPos = teleportPosition;
+
             }
             
             Gizmos.DrawWireSphere(targetPos, 0.5f);
