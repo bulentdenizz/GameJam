@@ -20,6 +20,14 @@ namespace SlimUI.ModernMenu{
         public GameObject exitMenu;
         [Tooltip("Optional 4th Menu")]
         public GameObject extrasMenu;
+        
+        [Header("BUTTON VISIBILITY")]
+        [Tooltip("Sadece Play ve Exit butonlarını göster (SETTINGS ve EXTRAS gizlenir)")]
+        public bool showOnlyPlayAndExit = false;
+        [Tooltip("SETTINGS butonu GameObject'i (otomatik bulunur)")]
+        public GameObject settingsButton;
+        [Tooltip("EXTRAS butonu GameObject'i (otomatik bulunur)")]
+        public GameObject extrasButton;
 
         public enum Theme {custom1, custom2, custom3};
         [Header("THEME SETTINGS")]
@@ -80,17 +88,91 @@ namespace SlimUI.ModernMenu{
         [Tooltip("The GameObject holding the Audio Source component for the SWOOSH SOUND when switching to the Settings Screen")]
         public AudioSource swooshSound;
 
-		void Start(){
-			CameraObject = transform.GetComponent<Animator>();
+	void Start(){
+		CameraObject = transform.GetComponent<Animator>();
 
-			playMenu.SetActive(false);
-			exitMenu.SetActive(false);
-			if(extrasMenu) extrasMenu.SetActive(false);
-			firstMenu.SetActive(true);
-			mainMenu.SetActive(true);
+		if(playMenu) playMenu.SetActive(false);
+		if(exitMenu) exitMenu.SetActive(false);
+		if(extrasMenu) extrasMenu.SetActive(false);
+		if(firstMenu) firstMenu.SetActive(true);
+		if(mainMenu) mainMenu.SetActive(true);
 
-			SetThemeColors();
+		SetThemeColors();
+		
+		// Sadece Play ve Exit butonlarını göster
+		if(showOnlyPlayAndExit)
+		{
+			HideExtraButtons();
 		}
+	}
+	
+	void HideExtraButtons()
+	{
+		// SETTINGS butonunu bul ve gizle
+		if(settingsButton == null)
+		{
+			settingsButton = FindButtonByName("SETTINGS");
+		}
+		if(settingsButton != null)
+		{
+			settingsButton.SetActive(false);
+		}
+		
+		// EXTRAS butonunu bul ve gizle
+		if(extrasButton == null)
+		{
+			extrasButton = FindButtonByName("EXTRAS");
+		}
+		if(extrasButton != null)
+		{
+			extrasButton.SetActive(false);
+		}
+	}
+	
+	GameObject FindButtonByName(string buttonName)
+	{
+		// firstMenu içinde butonu ara
+		if(firstMenu != null)
+		{
+			Transform[] children = firstMenu.GetComponentsInChildren<Transform>(true);
+			foreach(Transform child in children)
+			{
+				if(child.name == buttonName)
+				{
+					return child.gameObject;
+				}
+			}
+		}
+		
+		// mainMenu içinde butonu ara
+		if(mainMenu != null)
+		{
+			Transform[] children = mainMenu.GetComponentsInChildren<Transform>(true);
+			foreach(Transform child in children)
+			{
+				if(child.name == buttonName)
+				{
+					return child.gameObject;
+				}
+			}
+		}
+		
+		// Canvas içinde genel arama
+		Canvas canvas = GetComponentInParent<Canvas>();
+		if(canvas != null)
+		{
+			Transform[] allChildren = canvas.GetComponentsInChildren<Transform>(true);
+			foreach(Transform child in allChildren)
+			{
+				if(child.name == buttonName)
+				{
+					return child.gameObject;
+				}
+			}
+		}
+		
+		return null;
+	}
 
 		void SetThemeColors()
 		{
@@ -117,25 +199,25 @@ namespace SlimUI.ModernMenu{
 			}
 		}
 
-		public void PlayCampaign(){
-			exitMenu.SetActive(false);
-			if(extrasMenu) extrasMenu.SetActive(false);
-			playMenu.SetActive(true);
-		}
-		
-		public void PlayCampaignMobile(){
-			exitMenu.SetActive(false);
-			if(extrasMenu) extrasMenu.SetActive(false);
-			playMenu.SetActive(true);
-			mainMenu.SetActive(false);
-		}
+	public void PlayCampaign(){
+		if(exitMenu) exitMenu.SetActive(false);
+		if(extrasMenu) extrasMenu.SetActive(false);
+		if(playMenu) playMenu.SetActive(true);
+	}
+	
+	public void PlayCampaignMobile(){
+		if(exitMenu) exitMenu.SetActive(false);
+		if(extrasMenu) extrasMenu.SetActive(false);
+		if(playMenu) playMenu.SetActive(true);
+		if(mainMenu) mainMenu.SetActive(false);
+	}
 
-		public void ReturnMenu(){
-			playMenu.SetActive(false);
-			if(extrasMenu) extrasMenu.SetActive(false);
-			exitMenu.SetActive(false);
-			mainMenu.SetActive(true);
-		}
+	public void ReturnMenu(){
+		if(playMenu) playMenu.SetActive(false);
+		if(extrasMenu) extrasMenu.SetActive(false);
+		if(exitMenu) exitMenu.SetActive(false);
+		if(mainMenu) mainMenu.SetActive(true);
+	}
 
 		public void LoadScene(string scene){
 			if(scene != ""){
@@ -143,9 +225,9 @@ namespace SlimUI.ModernMenu{
 			}
 		}
 
-		public void  DisablePlayCampaign(){
-			playMenu.SetActive(false);
-		}
+	public void  DisablePlayCampaign(){
+		if(playMenu) playMenu.SetActive(false);
+	}
 
 		public void Position2(){
 			DisablePlayCampaign();
@@ -233,25 +315,25 @@ namespace SlimUI.ModernMenu{
 			swooshSound.Play();
 		}
 
-		// Are You Sure - Quit Panel Pop Up
-		public void AreYouSure(){
-			exitMenu.SetActive(true);
-			if(extrasMenu) extrasMenu.SetActive(false);
-			DisablePlayCampaign();
-		}
+	// Are You Sure - Quit Panel Pop Up
+	public void AreYouSure(){
+		if(exitMenu) exitMenu.SetActive(true);
+		if(extrasMenu) extrasMenu.SetActive(false);
+		DisablePlayCampaign();
+	}
 
-		public void AreYouSureMobile(){
-			exitMenu.SetActive(true);
-			if(extrasMenu) extrasMenu.SetActive(false);
-			mainMenu.SetActive(false);
-			DisablePlayCampaign();
-		}
+	public void AreYouSureMobile(){
+		if(exitMenu) exitMenu.SetActive(true);
+		if(extrasMenu) extrasMenu.SetActive(false);
+		if(mainMenu) mainMenu.SetActive(false);
+		DisablePlayCampaign();
+	}
 
-		public void ExtrasMenu(){
-			playMenu.SetActive(false);
-			if(extrasMenu) extrasMenu.SetActive(true);
-			exitMenu.SetActive(false);
-		}
+	public void ExtrasMenu(){
+		if(playMenu) playMenu.SetActive(false);
+		if(extrasMenu) extrasMenu.SetActive(true);
+		if(exitMenu) exitMenu.SetActive(false);
+	}
 
 		public void QuitGame(){
 			#if UNITY_EDITOR
