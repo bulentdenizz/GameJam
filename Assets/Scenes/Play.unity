@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ComponentToggleZone
   playerTag: Player
-  playerObject: {fileID: 0}
+  playerObject: {fileID: 919132149322330562}
   componentsToDisable: []
   gameObjectsToDisable: []
   disableGameObjectTag: 
@@ -6956,7 +6956,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ComponentToggleZone
   playerTag: Player
-  playerObject: {fileID: 0}
+  playerObject: {fileID: 919132149322330562}
   componentsToDisable:
   - {fileID: 0}
   gameObjectsToDisable:
@@ -15491,7 +15491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ComponentToggleZone
   playerTag: Player
-  playerObject: {fileID: 0}
+  playerObject: {fileID: 919132149322330562}
   componentsToDisable:
   - {fileID: 0}
   gameObjectsToDisable:
@@ -21585,7 +21585,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ComponentToggleZone
   playerTag: Player
-  playerObject: {fileID: 0}
+  playerObject: {fileID: 919132149322330562}
   componentsToDisable:
   - {fileID: 0}
   gameObjectsToDisable:
