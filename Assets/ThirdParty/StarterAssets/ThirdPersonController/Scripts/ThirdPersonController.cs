@@ -75,9 +75,6 @@ namespace StarterAssets
         [Tooltip("For locking the camera position on all axis")]
         public bool LockCameraPosition = false;
 
-        [Tooltip("Kamerayı döndürdüğünde karakter de dönsün mü?")]
-        public bool RotatePlayerWithCamera = true;
-
         // cinemachine
         private float _cinemachineTargetYaw;
         private float _cinemachineTargetPitch;
@@ -203,15 +200,6 @@ namespace StarterAssets
 
                 _cinemachineTargetYaw += _input.look.x * deltaTimeMultiplier;
                 _cinemachineTargetPitch += _input.look.y * deltaTimeMultiplier;
-
-                // Kamerayı döndürdüğünde karakteri de döndür (hareket etmiyorsa)
-                if (RotatePlayerWithCamera && _input.look.x != 0 && _input.move == Vector2.zero)
-                {
-                    float targetYaw = _cinemachineTargetYaw;
-                    float currentYaw = transform.eulerAngles.y;
-                    float rotation = Mathf.SmoothDampAngle(currentYaw, targetYaw, ref _rotationVelocity, RotationSmoothTime);
-                    transform.rotation = Quaternion.Euler(0.0f, rotation, 0.0f);
-                }
             }
 
             // clamp our rotations so our values are limited 360 degrees
