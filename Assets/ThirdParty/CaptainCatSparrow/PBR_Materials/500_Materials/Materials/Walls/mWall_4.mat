@@ -22,16 +22,17 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: mWall_4
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
-  m_Parent: {fileID: 2100000, guid: 72f176d94056beb4693d9c889bb12353, type: 2}
-  m_ModifiedSerializedProperties: 0
+  m_Parent: {fileID: 2100000, guid: d828d965dd3389d4baf10b61c8029800, type: 2}
+  m_ModifiedSerializedProperties: 2
   m_ValidKeywords:
+  - _EMISSION
   - _METALLICSPECGLOSSMAP
   - _NORMALMAP
   - _OCCLUSIONMAP
   - _PARALLAXMAP
   m_InvalidKeywords:
   - _METALLICGLOSSMAP
-  m_LightmapFlags: 4
+  m_LightmapFlags: 6
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -69,6 +70,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats: []
-    m_Colors: []
+    m_Colors:
+    - _BaseColor: {r: 0.7433963, g: 0.72374976, b: 0.08275537, a: 1}
+    - _Color: {r: 0.7433963, g: 0.72374976, b: 0.082755335, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
